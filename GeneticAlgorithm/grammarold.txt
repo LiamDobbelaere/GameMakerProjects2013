@@ -1,0 +1,3 @@
+<ACTION> ::= commit("u")|commit("r")|commit("d")|commit("l")|if (<CONDITION>) { <ACTION> } else { <ACTION> }
+<CONDITION> ::= <DIGIT> != <DIGIT>|true|false
+<DIGIT> ::= 1|2|3|4|5|6|7|8

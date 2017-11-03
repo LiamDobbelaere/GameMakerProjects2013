@@ -1,0 +1,20 @@
+//MD5 Security 8 numbers per pixel = 1 MD5 per 4 pixels
+md5 = md5_hash_string(key)
+md5_mainCounter = 1
+md5_subCounter = 0
+md5_arrCounter = 0
+md5_add = 0
+
+while md5_mainCounter<=32
+{
+    md5_add+=hextodec(string_char_at(md5,md5_mainCounter))
+    md5_subCounter+=1
+    if md5_subCounter = 4 then
+        {
+            md5_array[md5_arrCounter] = md5_add
+            md5_subCounter = 0
+            md5_add = 0
+            md5_arrCounter += 1
+        }
+    md5_mainCounter+=1
+}

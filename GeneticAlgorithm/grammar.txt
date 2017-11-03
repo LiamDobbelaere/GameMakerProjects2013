@@ -1,0 +1,5 @@
+<START> ::= if (<BOOL>) { <ACT> } else { <ACT> }
+<ACT> ::= <ACT> <ACT>|if (<BOOL>) { <ACT> } else { <ACT> }| move_left(); <BACT>|move_forward(); <BACT>|move_right(); <BACT>|move_backward(); <BACT>
+<BACT> ::= <ACT>|move_left();|move_right();|move_forward();|move_backward();|if (<BOOL>) { <BACT> } else { <BACT> }
+<BOOL> ::= greater_than(<VAR>,<VAR>)|smaller_than(<VAR>,<VAR>)|<VAR> == <VAR>
+<VAR> ::= wall_forward|wall_left|wall_right|wall_backward
